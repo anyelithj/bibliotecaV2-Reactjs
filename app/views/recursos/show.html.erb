@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @recurso.id %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @recurso.titulo %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @recurso.nombre %>
+</p>
+
+<p>
+  <strong>Editorial:</strong>
+  <%= @recurso.editorial %>
+</p>
+
+<%= link_to 'Editar', edit_recurso_path(@recurso) %> |
+<%= link_to 'Atras', recursos_path %>

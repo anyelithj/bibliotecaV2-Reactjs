@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @recursousuario.id %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @recursousuario.email %>
+</p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @recursousuario.cedula %>
+</p>
+
+<p>
+  <strong>Libro:</strong>
+  <%= @recursousuario.libro %>
+</p>
+
+<p>
+  <strong>Idlibro:</strong>
+  <%= @recursousuario.idlibro %>
+</p>
+
+<%= link_to 'Editar', edit_recursousuario_path(@recursousuario) %> |
+<%= link_to 'Atras', recursousuarios_path %>

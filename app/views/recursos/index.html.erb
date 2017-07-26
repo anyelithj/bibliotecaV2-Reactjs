@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>LIBRERIA</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Titulo</th>
+      <th>Nombre</th>
+      <th>Editorial</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @recursos.each do |recurso| %>
+      <tr>
+        <td><%= recurso.id %></td>
+        <td><%= recurso.titulo %></td>
+        <td><%= recurso.nombre %></td>
+        <td><%= recurso.editorial %></td>
+        <td><%= link_to 'Mostrar', recurso %></td>
+        <td><%= link_to 'Editar', edit_recurso_path(recurso) %></td>
+        <td><%= link_to 'Eliminar', recurso, method: :delete, data: { confirm: 'desea eliminar datos?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <%= react_component 'recursos',{data: @recursos}%>
+<br>
+
+<%= link_to 'Agregar libro', new_recurso_path %>
+<br>
+<%= link_to 'Usuarios', recursousuarios_path %>

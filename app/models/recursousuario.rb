@@ -1,0 +1,2 @@
+class Recursousuario < ApplicationRecord
+end

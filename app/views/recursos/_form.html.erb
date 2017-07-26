@@ -1,0 +1,37 @@
+<%= form_with(model: recurso, local: true) do |form| %>
+  <% if recurso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recurso.errors.count, "error") %> prohibited this recurso from being saved:</h2>
+
+      <ul>
+      <% recurso.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id, id: :recurso_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :recurso_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :recurso_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :editorial %>
+    <%= form.text_field :editorial, id: :recurso_editorial %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

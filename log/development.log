@@ -1,0 +1,1584 @@
+  [1m[35m (13.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (296.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (109.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT GET_LOCK(3479646831834191865, 0)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecursos (20170724154110)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(3479646831834191865)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (88.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(3479646831834191865, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecursos (20170724154110)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(3479646831834191865)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK(3479646831834191865, 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecursos (20170724154110)
+  [1m[35m (70.0ms)[0m  [1m[35mCREATE TABLE `recursos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `titulo` varchar(255), `nombre` varchar(255), `editorial` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170724154110')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRecursousuarios (20170724155052)
+  [1m[35m (105.5ms)[0m  [1m[35mCREATE TABLE `recursousuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255), `cedula` varchar(255), `libro` varchar(255), `idlibro` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170724155052')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-07-24 16:37:19', '2017-07-24 16:37:19')[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK(3479646831834191865)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSHOW CREATE TABLE `recursos`[0m
+  [1m[35m (2.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'recursos'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW CREATE TABLE `recursousuarios`[0m
+  [1m[35m (26.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'recursousuarios'[0m
+Started GET "/" for 127.0.0.1 at 2017-07-24 11:56:02 -0500
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (31.0ms)
+Completed 200 OK in 715ms (Views: 365.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos_controller" for 127.0.0.1 at 2017-07-24 11:59:38 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+ActionController::RoutingError (No route matches [GET] "/recursos_controller"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recursousuario" for 127.0.0.1 at 2017-07-24 12:01:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recursousuario"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 12:04:13 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 20199ms (Views: 19989.2ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-24 12:06:43 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (388.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (558.0ms)
+Completed 200 OK in 2555ms (Views: 2356.8ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 12:06:53 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 1360ms (Views: 1217.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-24 12:08:22 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (27.5ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (574.5ms)
+Completed 200 OK in 5374ms (Views: 5159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:15:41 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 2547ms (Views: 2310.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:16:51 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 1640ms (Views: 1513.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:18:20 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 1029ms (Views: 905.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 13:20:12 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 2973ms (Views: 2770.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-24 14:01:17 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (101.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (469.5ms)
+Completed 200 OK in 5018ms (Views: 4167.0ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-24 14:01:43 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 4071ms (Views: 3606.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/recurso" for 127.0.0.1 at 2017-07-24 14:02:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recurso"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-25 11:27:33 -0500
+  [1m[35m (85.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (29.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (55.0ms)
+Completed 200 OK in 716ms (Views: 337.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recusrsos" for 127.0.0.1 at 2017-07-25 11:30:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recusrsos"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 11:31:12 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecurso Load (109.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (161.1ms)
+Completed 200 OK in 3345ms (Views: 3122.3ms | ActiveRecord: 141.0ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 11:32:15 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (158.1ms)
+  Rendered recursos/new.html.erb within layouts/application (239.0ms)
+Completed 200 OK in 814ms (Views: 650.5ms | ActiveRecord: 71.0ms)
+
+
+Started POST "/recursos" for 127.0.0.1 at 2017-07-25 11:32:59 -0500
+Processing by RecursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B7mgqQp4Lc6MtkpMNYdlv8tUUdnDw+09CiHMqvD5Crcp2bfrS3zhSHc8NFG3CDsUbfWuqssVcQOBa71Yxqk7hA==", "recurso"=>{"id"=>"", "titulo"=>"carritos", "nombre"=>"anyelith", "editorial"=>"norma"}, "commit"=>"Create Recurso"}
+  [1m[35m (21.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (77.2ms)[0m  [1m[32mINSERT INTO `recursos` (`titulo`, `nombre`, `editorial`, `created_at`, `updated_at`) VALUES ('carritos', 'anyelith', 'norma', '2017-07-25 16:32:59', '2017-07-25 16:32:59')[0m
+  [1m[35m (36.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/recursos/1
+Completed 302 Found in 156ms (ActiveRecord: 134.2ms)
+
+
+Started GET "/recursos/1" for 127.0.0.1 at 2017-07-25 11:32:59 -0500
+Processing by RecursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecurso Load (21.0ms)[0m  [1m[34mSELECT  `recursos`.* FROM `recursos` WHERE `recursos`.`id` = 1 LIMIT 1[0m
+  Rendering recursos/show.html.erb within layouts/application
+  Rendered recursos/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 583ms (Views: 407.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 11:33:05 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 459ms (Views: 399.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:00:45 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (6.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 7619ms (Views: 7520.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 12:01:02 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (12.0ms)
+  Rendered recursos/new.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 755ms (Views: 687.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:01:06 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 598ms (Views: 527.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:14:48 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 2197ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:12: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1009966454_58140288'
+Started POST "/__web_console/repl_sessions/261092422397da5b92bea0eb810b0dea/trace" for 127.0.0.1 at 2017-07-25 12:15:40 -0500
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:17:04 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 2011ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:12: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1009966454_102448380'
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:19:10 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 3024ms (Views: 2888.4ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:21:49 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 2415ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:12: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1009966454_114076908'
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:22:49 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 1847ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:12: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1009966454_96941652'
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:23:47 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 1953ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:12: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1009966454_113570160'
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:25:15 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (10.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 2182ms (ActiveRecord: 10.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:5:12: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1009966454_60487500'
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:26:12 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (2.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 534ms (Views: 465.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 12:26:18 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (9.5ms)
+  Rendered recursos/new.html.erb within layouts/application (78.6ms)
+Completed 200 OK in 617ms (Views: 525.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 12:26:21 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (2.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 734ms (Views: 616.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 13:25:17 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (92.0ms)
+  Rendered recursos/new.html.erb within layouts/application (306.0ms)
+Completed 200 OK in 3422ms (Views: 3145.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recursos" for 127.0.0.1 at 2017-07-25 13:25:51 -0500
+Processing by RecursosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ksQgJ3kK7vsBnZk5Djq1/+02h1zD0oskaXonwU7+AzwKwfC3ODnPReMCHlmt7R8WRUlbnvZ1hIa75ltM2vJPw==", "recurso"=>{"id"=>"", "titulo"=>"caballero de la noche", "nombre"=>"ramas", "editorial"=>"san joaquin"}, "commit"=>"Create Recurso"}
+  [1m[35m (9.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.5ms)[0m  [1m[32mINSERT INTO `recursos` (`titulo`, `nombre`, `editorial`, `created_at`, `updated_at`) VALUES ('caballero de la noche', 'ramas', 'san joaquin', '2017-07-25 18:25:52', '2017-07-25 18:25:52')[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/recursos/2
+Completed 302 Found in 269ms (ActiveRecord: 97.0ms)
+
+
+Started GET "/recursos/2" for 127.0.0.1 at 2017-07-25 13:25:52 -0500
+Processing by RecursosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecurso Load (11.0ms)[0m  [1m[34mSELECT  `recursos`.* FROM `recursos` WHERE `recursos`.`id` = 2 LIMIT 1[0m
+  Rendering recursos/show.html.erb within layouts/application
+  Rendered recursos/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 2183ms (Views: 2024.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 13:26:07 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (2.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 2745ms (Views: 2583.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 13:48:55 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (4.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (170.5ms)
+Completed 200 OK in 4849ms (Views: 4593.3ms | ActiveRecord: 57.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 13:49:09 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (30.5ms)
+  Rendered recursos/new.html.erb within layouts/application (324.0ms)
+Completed 200 OK in 2061ms (Views: 1902.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 13:50:05 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (14.5ms)
+  Rendered recursos/new.html.erb within layouts/application (146.5ms)
+Completed 200 OK in 2532ms (Views: 2344.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 13:52:26 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 2470ms (Views: 2309.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 13:53:36 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  Rendered recursos/index.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 722ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (c:/RailsInstaller/rails/biblioteca/app/views/recursos/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/recursos/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:02:45 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (8.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (1888.1ms)
+Completed 200 OK in 7551ms (Views: 6815.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:06:28 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (5.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (118.5ms)
+Completed 200 OK in 5003ms (Views: 4814.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:07:36 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (2.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 3749ms (Views: 3517.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:16:14 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (3.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (166.5ms)
+Completed 200 OK in 4687ms (Views: 4370.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:20:33 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (9.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (110.0ms)
+Completed 200 OK in 4224ms (Views: 3962.4ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:22:16 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (3.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 2369ms (Views: 2131.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:23:54 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (5.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 5316ms (Views: 5085.6ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:24:51 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (3.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 2076ms (Views: 1937.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:27:26 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (5.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (162.0ms)
+Completed 200 OK in 4550ms (Views: 4150.7ms | ActiveRecord: 50.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 14:30:39 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (3.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 4693ms (Views: 4498.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 14:45:48 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (81.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (184.0ms)
+Completed 200 OK in 3949ms (Views: 3528.8ms | ActiveRecord: 114.0ms)
+
+
+Started GET "/recursousuario" for 127.0.0.1 at 2017-07-25 14:45:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/recursousuario"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 14:47:04 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 2173ms (Views: 2051.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 14:47:13 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (68.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (378.5ms)
+Completed 200 OK in 2716ms (Views: 2528.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/recursousuarios" for 127.0.0.1 at 2017-07-25 14:48:00 -0500
+Processing by RecursousuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KCWMjvy2thujr4YhcfERb8TmAconm1HPbahvaY8pXzOwIFwevYWXpUEwAUHSJruGbJndCBI8Xm2/NBPkGyUTw==", "recursousuario"=>{"id"=>"", "email"=>"@anyeliyh", "cedula"=>"123456789", "libro"=>"una rosa", "idlibro"=>"1"}, "commit"=>"Create Recursousuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.5ms)[0m  [1m[32mINSERT INTO `recursousuarios` (`email`, `cedula`, `libro`, `idlibro`, `created_at`, `updated_at`) VALUES ('@anyeliyh', '123456789', 'una rosa', 1, '2017-07-25 19:48:01', '2017-07-25 19:48:01')[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/recursousuarios/1
+Completed 302 Found in 308ms (ActiveRecord: 74.5ms)
+
+
+Started GET "/recursousuarios/1" for 127.0.0.1 at 2017-07-25 14:48:01 -0500
+Processing by RecursousuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecursousuario Load (21.0ms)[0m  [1m[34mSELECT  `recursousuarios`.* FROM `recursousuarios` WHERE `recursousuarios`.`id` = 1 LIMIT 1[0m
+  Rendering recursousuarios/show.html.erb within layouts/application
+  Rendered recursousuarios/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 2381ms (Views: 2047.8ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 14:48:10 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 2229ms (Views: 2120.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:18:25 -0500
+  [1m[35m (38.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (44.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (120.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (788.0ms)
+Completed 200 OK in 52598ms (Views: 50555.4ms | ActiveRecord: 178.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:26:18 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (555.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (941.0ms)
+Completed 200 OK in 2844ms (Views: 2528.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios/1/edit" for 127.0.0.1 at 2017-07-25 16:26:48 -0500
+Processing by RecursousuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecursousuario Load (21.0ms)[0m  [1m[34mSELECT  `recursousuarios`.* FROM `recursousuarios` WHERE `recursousuarios`.`id` = 1 LIMIT 1[0m
+  Rendering recursousuarios/edit.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (41.0ms)
+  Rendered recursousuarios/edit.html.erb within layouts/application (312.5ms)
+Completed 200 OK in 2627ms (Views: 2232.6ms | ActiveRecord: 21.0ms)
+
+
+Started PATCH "/recursousuarios/1" for 127.0.0.1 at 2017-07-25 16:27:12 -0500
+Processing by RecursousuariosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VVUz4hFpqXur3oFXttN6C7ZsN9AcN3NuPuqI2cOBXkl7NSSgUG1l/VBU/0o0XCSgEM3IoxTh71C1oPkr9dFveg==", "recursousuario"=>{"id"=>"1", "email"=>"@anyelith", "cedula"=>"123456789", "libro"=>"una rosa", "idlibro"=>"1"}, "commit"=>"Update Recursousuario", "id"=>"1"}
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT  `recursousuarios`.* FROM `recursousuarios` WHERE `recursousuarios`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (70.5ms)[0m  [1m[33mUPDATE `recursousuarios` SET `email` = '@anyelith', `updated_at` = '2017-07-25 21:27:12' WHERE `recursousuarios`.`id` = 1[0m
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/recursousuarios/1
+Completed 302 Found in 173ms (ActiveRecord: 111.0ms)
+
+
+Started GET "/recursousuarios/1" for 127.0.0.1 at 2017-07-25 16:27:13 -0500
+Processing by RecursousuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecursousuario Load (9.5ms)[0m  [1m[34mSELECT  `recursousuarios`.* FROM `recursousuarios` WHERE `recursousuarios`.`id` = 1 LIMIT 1[0m
+  Rendering recursousuarios/show.html.erb within layouts/application
+  Rendered recursousuarios/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1786ms (Views: 1493.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:27:23 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (5.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 2099ms (Views: 1801.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:29:23 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (186.0ms)
+Completed 200 OK in 5062ms (Views: 4661.5ms | ActiveRecord: 60.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:29:33 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (55.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (392.5ms)
+Completed 200 OK in 4853ms (Views: 4389.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:29:47 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (21.5ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (222.5ms)
+Completed 200 OK in 3061ms (Views: 2816.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:29:56 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (18.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (244.0ms)
+Completed 200 OK in 2935ms (Views: 2678.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:30:06 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (35.5ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (261.0ms)
+Completed 200 OK in 3292ms (Views: 3006.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:33:53 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (821.0ms)
+Completed 500 Internal Server Error in 2465ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"recursos"}, missing required keys: [:id]):
+    31: </table>
+    32: <%= react_component 'components', {data: @recursousuarios}%>
+    33: <br>
+    34: <%= link_to 'New Index',recurso_path %>
+    35: <%= link_to 'New Recursousuario', new_recursousuario_path %>
+  
+app/views/recursousuarios/index.html.erb:34:in `_app_views_recursousuarios_index_html_erb___418276074_98118708'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:35:20 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (3.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 4218ms (Views: 2971.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:37:32 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 2899ms (Views: 2590.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 16:37:40 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (22.0ms)
+  Rendered recursos/new.html.erb within layouts/application (276.5ms)
+Completed 200 OK in 3429ms (Views: 2982.4ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:38:27 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 2790ms (Views: 2502.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 16:38:37 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (46.0ms)
+  Rendered recursos/new.html.erb within layouts/application (336.5ms)
+Completed 200 OK in 3215ms (Views: 2969.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:40:12 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (5222.6ms)
+Completed 500 Internal Server Error in 6297ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_Index_path' for #<#<Class:0x70798e0>:0x61b34c8>
+Did you mean?  new_recurso_path):
+    31: </table>
+    32: <%= react_component 'components', {data: @recursousuarios}%>
+    33: <br>
+    34: <%= link_to 'Libreria', new_Index_path %>
+    35: <br>
+    36: <%= link_to 'Nuevo Usuario', new_recursousuario_path %>
+  
+app/views/recursousuarios/index.html.erb:34:in `_app_views_recursousuarios_index_html_erb___418276074_51236748'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:42:25 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (6.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (7547.3ms)
+Completed 500 Internal Server Error in 8718ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_Index_path' for #<#<Class:0x70798e0>:0x786ddb8>
+Did you mean?  new_recurso_path):
+    31: </table>
+    32: <%= react_component 'components', {data: @recursousuarios}%>
+    33: <br>
+    34: <%= link_to 'New recurso', new_Index_path %>
+    35: <br>
+    36: <%= link_to 'New Recursousuario', new_recursousuario_path %>
+  
+app/views/recursousuarios/index.html.erb:34:in `_app_views_recursousuarios_index_html_erb___418276074_63141600'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:44:24 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (5.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 3261ms (Views: 2963.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:44:34 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 2683ms (Views: 2385.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:44:52 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (4.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 3072ms (Views: 2810.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:45:11 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (22.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (382.0ms)
+Completed 200 OK in 3043ms (Views: 2800.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:45:21 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 2555ms (Views: 2345.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:46:19 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 2797ms (Views: 2493.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:46:39 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (9.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 3299ms (Views: 3020.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 16:46:52 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (16.5ms)
+  Rendered recursos/new.html.erb within layouts/application (444.0ms)
+Completed 200 OK in 3352ms (Views: 3015.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:47:04 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (15.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (158.5ms)
+Completed 200 OK in 3267ms (Views: 2947.5ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 16:48:38 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (34.0ms)
+  Rendered recursos/new.html.erb within layouts/application (500.5ms)
+Completed 200 OK in 3583ms (Views: 3288.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:48:46 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (3.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 2967ms (Views: 2629.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:50:26 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (3.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 3073ms (Views: 2695.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:50:35 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 3080ms (Views: 2825.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 16:50:44 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (16.5ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (261.5ms)
+Completed 200 OK in 3983ms (Views: 3690.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 16:50:52 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 3414ms (Views: 3119.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:51:01 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (2.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 3027ms (Views: 2723.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:57:06 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 2438ms (Views: 2143.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:58:27 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 2786ms (Views: 2519.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 16:58:58 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (27.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (140.5ms)
+Completed 200 OK in 3560ms (Views: 3189.5ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/recursos/1" for 127.0.0.1 at 2017-07-25 16:59:51 -0500
+Processing by RecursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecurso Load (20.5ms)[0m  [1m[34mSELECT  `recursos`.* FROM `recursos` WHERE `recursos`.`id` = 1 LIMIT 1[0m
+  Rendering recursos/show.html.erb within layouts/application
+  Rendered recursos/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 2913ms (Views: 2564.9ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 17:00:00 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 2553ms (Views: 2301.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-25 17:00:07 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (23.0ms)
+  Rendered recursos/new.html.erb within layouts/application (288.5ms)
+Completed 200 OK in 3290ms (Views: 2884.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 17:00:15 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (18.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (92.0ms)
+Completed 200 OK in 3071ms (Views: 2791.5ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:00:24 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 2687ms (Views: 2356.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-25 17:00:33 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (15.0ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (299.5ms)
+Completed 200 OK in 3121ms (Views: 2798.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:00:44 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 3166ms (Views: 2879.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-25 17:00:52 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 3221ms (Views: 2703.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:01:03 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (3.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 3105ms (Views: 2836.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:05:07 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  Rendered recursousuarios/index.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 1170ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (c:/RailsInstaller/rails/biblioteca/app/views/recursousuarios/index.html.erb:33: syntax error, unexpected ',', expecting ')'
+... react_component ("Helloworld",props:@some_props));@output_b...
+...                               ^):
+  
+app/views/recursousuarios/index.html.erb:33: syntax error, unexpected ',', expecting ')'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:08:01 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  Rendered recursousuarios/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 1287ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (c:/RailsInstaller/rails/biblioteca/app/views/recursousuarios/index.html.erb:33: syntax error, unexpected ',', expecting ')'
+... react_component ("components",props:@recursousuarios));@out...
+...                               ^):
+  
+app/views/recursousuarios/index.html.erb:33: syntax error, unexpected ',', expecting ')'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:09:39 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (10.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 4911ms (Views: 4504.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:12:04 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (7.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 2726ms (Views: 2462.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:13:31 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (12.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 3521ms (Views: 3243.1ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:17:53 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (3.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (191.0ms)
+Completed 200 OK in 8126ms (Views: 7654.4ms | ActiveRecord: 88.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:19:19 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (1.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 3232ms (Views: 2947.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:20:36 -0500
+  
+ArgumentError ('reactLibros' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:4:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 17:29:08 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (6.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (140.5ms)
+Completed 200 OK in 3342ms (Views: 2915.1ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 19:57:17 -0500
+  [1m[35m (59.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (26.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (131.0ms)
+Completed 200 OK in 2851ms (Views: 1600.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 19:57:45 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[35m (14.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecursousuario Load (73.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (402.0ms)
+Completed 200 OK in 34859ms (Views: 34019.4ms | ActiveRecord: 237.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 21:10:22 -0500
+  [1m[35m (84.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (36.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (49.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (795.2ms)
+Completed 200 OK in 42906ms (Views: 41690.0ms | ActiveRecord: 149.1ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 21:23:51 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (4.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (12160.0ms)
+Completed 500 Internal Server Error in 13766ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `recursousuarios' for #<#<Class:0x4e67d58>:0x7295520>
+Did you mean?  @recursousuarios
+               recursousuarios_url
+               recursousuarios_path
+               recursousuario_url):
+    32: <tr>
+    33: <%= react_component 'reactLibros', {data: @recursousuarios}%>
+    34: <tr>
+    35:   <td><%= recursousuarios.id %></td>
+    36:   <td><%= recursousuarios.email %></td>
+    37:   <td><%= recursousuarios.cedula %></td>
+    38: 
+  
+app/views/recursousuarios/index.html.erb:35:in `_app_views_recursousuarios_index_html_erb__10787558_60077016'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 21:25:35 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[35m (459.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecursousuario Load (1523.4ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (26925.0ms)
+Completed 200 OK in 69694ms (Views: 66203.1ms | ActiveRecord: 1982.7ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 21:33:49 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (3.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 4495ms (Views: 4218.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 22:50:50 -0500
+  [1m[35m (265.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (30.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (94.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (1885.3ms)
+Completed 200 OK in 17113ms (Views: 16069.3ms | ActiveRecord: 494.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 23:04:34 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (12.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (1215.5ms)
+Completed 200 OK in 10669ms (Views: 9989.0ms | ActiveRecord: 79.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 23:06:14 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (8.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (94.5ms)
+Completed 200 OK in 4169ms (Views: 3889.3ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 23:07:42 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (2.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 3412ms (Views: 3179.3ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-25 23:47:19 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (8.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (81.5ms)
+Completed 200 OK in 4595ms (Views: 4393.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:02:47 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (22.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (567.5ms)
+Completed 500 Internal Server Error in 15695ms (ActiveRecord: 90.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___311855619_79859076'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:07:53 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (94.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (1340.1ms)
+Completed 500 Internal Server Error in 17930ms (ActiveRecord: 94.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+     8:     
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_110213424'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:09:32 -0500
+Processing by RecursousuariosController#index as HTML
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:09:43 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[35m (15.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mRecursousuario Load (6.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (9876.3ms)
+  [1m[36mRecursousuario Load (32.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (892.3ms)
+Completed 500 Internal Server Error in 30235ms (ActiveRecord: 34.0ms)
+
+
+Completed 500 Internal Server Error in 49425ms (ActiveRecord: 21.5ms)
+
+
+  
+  
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+     8: 
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+     8: 
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+  
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_93693240'
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_93693240'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:14:27 -0500
+Processing by RecursousuariosController#index as HTML
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:14:40 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (152.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendering recursousuarios/index.html.erb within layouts/application
+  Rendered recursousuarios/index.html.erb within layouts/application (334.5ms)
+  [1m[36mRecursousuario Load (144.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (187.5ms)
+Completed 500 Internal Server Error in 9606ms (ActiveRecord: 152.5ms)
+
+
+  
+Completed 500 Internal Server Error in 8852ms (ActiveRecord: 144.0ms)
+
+
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+  
+     8: 
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+  
+     8: 
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_59667756'
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_59667756'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:15:53 -0500
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:15:57 -0500
+Processing by RecursousuariosController#index as HTML
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (8252.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  [1m[35m (685.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (37099.8ms)
+  [1m[36mRecursousuario Load (887.9ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (48517.0ms)
+Completed 500 Internal Server Error in 140138ms (ActiveRecord: 8252.5ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+Completed 500 Internal Server Error in 140244ms (ActiveRecord: 1573.0ms)
+
+
+     8: 
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+  
+  
+ActionView::Template::Error (SyntaxError: [stdin]:7:16: unexpected .):
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_88155540'
+     8: 
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___311855619_88155540'
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:21:49 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (8454.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (18424.2ms)
+Completed 200 OK in 74549ms (Views: 54356.4ms | ActiveRecord: 8454.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:36:50 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (35.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (457.5ms)
+Completed 200 OK in 15760ms (Views: 14826.6ms | ActiveRecord: 56.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 00:40:41 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (66.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (177.0ms)
+Completed 200 OK in 7779ms (Views: 7410.4ms | ActiveRecord: 66.5ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 01:03:50 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (24.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (103.5ms)
+Completed 200 OK in 1373ms (Views: 1069.9ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 01:15:43 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (18.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (300.5ms)
+Completed 200 OK in 4160ms (Views: 3625.8ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 01:24:15 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (19.0ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (176.5ms)
+Completed 200 OK in 2381ms (Views: 2076.9ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/recursousuarios/new" for 127.0.0.1 at 2017-07-26 01:24:25 -0500
+Processing by RecursousuariosController#new as HTML
+  Rendering recursousuarios/new.html.erb within layouts/application
+  Rendered recursousuarios/_form.html.erb (514.5ms)
+  Rendered recursousuarios/new.html.erb within layouts/application (685.0ms)
+Completed 200 OK in 2021ms (Views: 1755.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursousuarios" for 127.0.0.1 at 2017-07-26 01:24:37 -0500
+Processing by RecursousuariosController#index as HTML
+  Rendering recursousuarios/index.html.erb within layouts/application
+  [1m[36mRecursousuario Load (9.5ms)[0m  [1m[34mSELECT `recursousuarios`.* FROM `recursousuarios`[0m
+  Rendered recursousuarios/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 1038ms (Views: 887.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-26 01:24:52 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (85.0ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (206.5ms)
+Completed 200 OK in 1411ms (Views: 1091.3ms | ActiveRecord: 109.5ms)
+
+
+Started GET "/recursos/new" for 127.0.0.1 at 2017-07-26 01:25:02 -0500
+Processing by RecursosController#new as HTML
+  Rendering recursos/new.html.erb within layouts/application
+  Rendered recursos/_form.html.erb (19.5ms)
+  Rendered recursos/new.html.erb within layouts/application (161.0ms)
+Completed 200 OK in 1388ms (Views: 1251.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-26 01:25:07 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (2.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 968ms (Views: 829.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recursos/1" for 127.0.0.1 at 2017-07-26 01:25:12 -0500
+Processing by RecursosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecurso Load (67.0ms)[0m  [1m[34mSELECT  `recursos`.* FROM `recursos` WHERE `recursos`.`id` = 1 LIMIT 1[0m
+  Rendering recursos/show.html.erb within layouts/application
+  Rendered recursos/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 2421ms (Views: 1244.5ms | ActiveRecord: 67.0ms)
+
+
+Started GET "/recursos" for 127.0.0.1 at 2017-07-26 01:25:23 -0500
+Processing by RecursosController#index as HTML
+  Rendering recursos/index.html.erb within layouts/application
+  [1m[36mRecurso Load (1.5ms)[0m  [1m[34mSELECT `recursos`.* FROM `recursos`[0m
+  Rendered recursos/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 1324ms (Views: 1157.7ms | ActiveRecord: 1.5ms)
+
+

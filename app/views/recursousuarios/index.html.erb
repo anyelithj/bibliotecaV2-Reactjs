@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>USUARIOS</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Cedula</th>
+      <th>Libro</th>
+      <th>Idlibro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recursousuarios.each do |recursousuario| %>
+      <tr>
+        <td><%= recursousuario.id %></td>
+        <td><%= recursousuario.email %></td>
+        <td><%= recursousuario.cedula %></td>
+        <td><%= recursousuario.libro %></td>
+        <td><%= recursousuario.idlibro %></td>
+        <td><%= link_to 'Mostrar', recursousuario %></td>
+        <td><%= link_to 'Editar', edit_recursousuario_path(recursousuario) %></td>
+        <td><%= link_to 'Eliminar', recursousuario, method: :delete, data: { confirm: 'desea eliminar datos?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <%= react_component 'recurso',{data: @recursousuarios}%>
+<br>
+<%= link_to 'Libreria', recursos_path %>
+<br>
+<%= link_to 'Nuevo Usuario', new_recursousuario_path %>
